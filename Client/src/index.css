@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand colors */
+    --background: 248 250 252;
+    --foreground: 218 32% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 32% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 32% 15%;
+
+    /* Primary theme */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 262 83% 52%;
+
+    --secondary: 216 100% 97%;
+    --secondary-foreground: 262 83% 58%;
+
+    /* Neutral tones */
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 13% 96%;
+    --accent-foreground: 262 83% 58%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 220 13% 91%;
+    --input: 0 0% 100%;
+    --input-border: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Gradients & shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(252 100% 67%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(252 100% 67%) 50%, hsl(299 71% 65%) 100%);
+    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.15);
+    --shadow-card: 0 4px 20px -2px hsl(220 13% 91% / 0.3);
+  }
+
+  .dark {
+    --background: 217 33% 8%;
+    --foreground: 216 100% 97%;
+
+    --card: 217 32% 10%;
+    --card-foreground: 216 100% 97%;
+
+    --popover: 217 32% 10%;
+    --popover-foreground: 216 100% 97%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 32% 12%;
+    --secondary-foreground: 216 100% 97%;
+
+    --muted: 217 32% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 12%;
+    --accent-foreground: 262 83% 58%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 10%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-purple-600 text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary border-2 border-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300;
+  }
+
+  /* Cards */
+  .card-feature {
+    @apply bg-white p-8 rounded-2xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .card-step {
+    @apply bg-gradient-to-br from-white to-secondary p-6 rounded-xl border border-border;
+  }
+
+  /* Forms */
+  .form-input,
+  .form-select {
+    @apply w-full px-4 py-3 bg-input border border-input-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+
+  /* Text gradient */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+}
