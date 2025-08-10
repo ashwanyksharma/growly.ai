@@ -34,15 +34,15 @@ This project lets users:
 ---
 ## 💻 Run Locally
 ### 1. Clone the repo
-```bash
-git clone https://github.com/yourusername/growly.git
+
+git clone https://github.com/ashwanyksharma/growly.git
 cd growly
 
 
 ### 2. Install dependencies
 
 **Frontend**
-```bash
+
 cd Client
 npm install
 
