@@ -42,7 +42,7 @@ cd growly
 ### 2. Install dependencies
 
 **Frontend**
-```bash
+
 cd Client
 npm install
 
