@@ -35,7 +35,7 @@ This project lets users:
 ## 💻 Run Locally
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/ashwanyksharma/growly.git
+git clone https://github.com/ashwanyksharma/growly.ai
 cd growly
 
 
