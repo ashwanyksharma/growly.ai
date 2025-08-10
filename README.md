@@ -18,7 +18,7 @@ This project lets users:
 
 **Frontend**
 - React + Vite
-- TailwindCSS & shadcn/ui
+- TailwindCSS
 - Axios for HTTP requests
 
 **Backend**
